@@ -6,7 +6,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
+body {
+    background-color: rgb(242, 240, 255);
+}
 html {
     scroll-behavior: smooth;
 }
@@ -18,17 +20,16 @@ html {
 }
 
 .navbar {
-    padding: 30px 0;
+    padding: 26px 0;
     width: 100%;
     position: fixed;
     font-family: 'Ubuntu', sans-serif;
-    background-color: rgba(3, 3, 3, 0.8);
     z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.navbar .sticky {
-    padding: 30px o;
-    color: crimson;
+.navbar.sticky {
+    background-color: #335ee0;
 }
 
 .navbar .max-width {
@@ -47,7 +48,7 @@ html {
 .navbar .logo a span {
     font-size: 36px;
     font-weight: 600;
-    color: crimson;
+    color: #4169E1;
 }
 
 .navbar .menu li {
@@ -57,7 +58,7 @@ html {
 
 .navbar .menu li a {
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     color: white;
     padding: 3px;
@@ -67,14 +68,16 @@ html {
     transition: 0.3s all ease;
 }
 
-
 .navbar .menu li a:hover {
-    color: greenyellow;
-    background-color: rgb(219, 93, 118);
-    border: 1px solid rgba(245, 222, 179, 0.575);
-    border-radius: 3px;
+    color: lawngreen;
+    text-decoration: underline;
 }
 
+
+.navbar .menu li a.activeNav {
+    text-decoration: underline;
+    color: lawngreen;
+}
 .menu-btn {
     color: white;
     font-size: 23px;
@@ -90,7 +93,7 @@ html {
     position: fixed;
     height: 45px;
     width: 42px;
-    background: crimson;
+    background: rgb(36, 82, 219);
     color: white;
     right: 30px;
     bottom: 10px;
@@ -99,10 +102,11 @@ html {
     z-index: 9999;
     cursor: pointer;
     border-radius: 6px;
+    border: solid 2px white;
     font-size: 30px;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.3s ease;
+    transition: all 1.3s ease;
 }
 
 .scroll-up-btn.show {
@@ -117,17 +121,35 @@ html {
 
 .home {
     display: flex;
-    background: url(images/Artboard\ 1.png) no-repeat center;
-    height: 100vh;
+    background-image: url(images/bg1.png);
+    background-repeat: no-repeat;
+    height: 110vh;
     background-position: center;
     background-size: cover;
     color: white;
     min-height: 500px;
     font-family: 'Ubuntu', sans-serif;
+    /* animation: slider 10s infinite; */
 }
 
+
+/* @keyframes slider {
+    0%{
+        background-image: url(images/droid.webp);
+        background-size: cover;
+    }
+    35%{
+        background-image: url(images/bg1.png);
+        background-size: cover;
+    }
+    75%{
+        background-image: url(images/code.png);
+        background-size: cover;
+    }
+} */
+
 .home .max-width {
-    margin: auto 0 auto 40px;
+    margin: auto 0 auto 50px;
 }
 
 .home .homeContent .text1 {
@@ -145,20 +167,29 @@ html {
     margin: 5px 0;
 }
 
+.home .homeContent .text3 ul {
+    font-size: 26px;
+    list-style: none;
+}
+
 .home .homeContent .text3 span {
-    color: crimson;
+    color: #4169E1;
     font-weight: 500;
 }
 
+
+.fade_in {
+    animation: fadeIn 2s;
+}
 .home .homeContent a {
     display: inline-block;
-    background: crimson;
+    background: #4169E1;
     color: white;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid white;
     transition: all 0.3s ease;
 }
 
@@ -167,6 +198,59 @@ html {
     background: none;
 }
 
+.dancing-btn {
+    width: 200px;
+    animation: jump-shaking 1.5s infinite ;
+}
+
+.dancing-btn:hover {
+    animation: jump-shaking 0.9s ;
+}
+
+.dancing-btn-2 {
+    width: 220px;
+    animation: vertical-shaking 0.8s infinite;
+}
+
+.dancing-btn-2:hover {
+    animation: vertical-shaking 0.8s;
+}
+
+@keyframes vertical-shaking {
+    0% { transform: translateY(0) }
+    25% { transform: translateY(5px) }
+    50% { transform: translateY(-5px) }
+    75% { transform: translateY(5px) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes jump-shaking {
+    0% { transform: translateX(0) }
+    15% { transform: translateY(-7px) }
+    25% { transform: translateY(-7px) rotate(8deg) }
+    45% { transform: translateY(-7px) rotate(-8deg) }
+    55% { transform: translateY(-7px) rotate(8deg) }
+    65% { transform: translateY(-7px) rotate(-8deg) }
+    85% { transform: translateY(0) rotate(0) }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 .about,
 .services,
@@ -200,9 +284,9 @@ section .tittle::before {
 
 section .tittle::after {
     position: absolute;
-    background: white;
+    background-color: rgb(242, 240, 255);
     font-size: 20px;
-    color: crimson;
+    color: black;
     bottom: -12px;
     left: 50%;
     padding: 5px;
@@ -226,7 +310,8 @@ section .tittle::after {
 }
 
 .services .tittle::after {
-    background: #111;
+    background: rgb(79, 62, 172);
+    color: white;
     content: "What I offer";
 }
 
@@ -240,8 +325,9 @@ section .tittle::after {
 }
 
 .projectGallery .tittle::after {
-    background: #111;
+    background: rgb(79, 62, 172);
     content: "My Projects";
+    color: white;
 }
 
 .contact .tittle::after {
@@ -271,7 +357,7 @@ section .tittle::after {
 }
 
 .about .about-content .column_right .columnText span {
-    color: crimson;
+    color: #4169E1;
 }
 
 .about .about-content .column_right p {
@@ -280,51 +366,68 @@ section .tittle::after {
 
 .about .about-content .column_right a {
     display: inline-block;
-    background: crimson;
+    background: #4169E1;
     color: white;
     font-weight: 500;
     font-size: 20px;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 4px;
-    border: 2px solid crimson;
+    border: 2px solid black;
     transition: all 0.3s ease;
 }
 
 .about .about-content .column_right a:hover {
-    color: crimson;
+    color: black;
     background: none;
 }
 
 .services,
 .projectGallery {
-    background: #111;
+    background: rgb(79, 62, 172);
     color: white;
 }
 
+.services .services-content {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .services .services-content .card {
-    width: calc(33% - 20px);
-    background: #222;
+    width: calc(33% - 10px);
+    color: white;
+    background: #4169E1;
+    padding-top: 20px;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
-.services .services-content .card:hover {
-    background-color: crimson;
+.services .services-content .card:hover{
+    background-color: white;
+    color: black;
+    animation: vertical-shaking 0.8s;
 }
 
 
 .services .services-content .card i {
     font-size: 50px;
-    color: crimson;
+    color: lawngreen;
     transition: color 0.3s ease;
 }
 
-.services .services-content .card:hover i {
-    color: #fff;
+.services .services-content .card:hover i, p {
+    color: black;
+}
+.services .services-content .card:hover  p {
+    color: black;
 }
 
 .services .services-content .card .text {
@@ -334,11 +437,18 @@ section .tittle::after {
 }
 
 .services .services-content .card .box {
+    color: white;
+    width: 100%;
     transition: all 0.3s ease;
 }
 
 .services .services-content .card .box:hover {
     transform: scale(1.05);
+    color: black;
+}
+
+.services .services-content .card .box:hover {
+    color: black;
 }
 
 .skills .skills-content .left-column {
@@ -361,18 +471,18 @@ section .tittle::after {
 
 .skills .skills-content .left-column a {
     display: inline-block;
-    background: crimson;
+    background: #4169E1;
     color: white;
     font-size: 18px;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid black;
     transition: all 0.3s ease;
 }
 
 .skills .skills-content .left-column a:hover {
-    color: crimson;
+    color: black;
     background: none;
 }
 
@@ -405,7 +515,7 @@ section .tittle::after {
     height: 100%;
     left: 0;
     top: 0;
-    background-color: crimson;
+    background-color: #4169E1;
 }
 
 .skills .skills-content .right-column .html::before {
@@ -438,23 +548,23 @@ section .tittle::after {
     width: 100%;
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: stretch;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.card {
-    background: #222;
-    width: calc(33.33% - 40px);
+.projectGallery .projects-content .card {
+    background: #4169E1;
+    width: calc(33% - 10px);
+    margin-right: 10px;
     color: white;
     border-radius: 6px;
     padding-top: 3px;
     margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
-.card h3 {
+.projectGallery .projects-content .card h3 {
     text-align: center;
     font-size: 20px;
     font-weight: 500;
@@ -470,7 +580,7 @@ section .tittle::after {
 }
 
 .projectDP {
-    background-image: url(images/jet.jpg);
+    background-image: url(images/droid.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -480,6 +590,13 @@ section .tittle::after {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid white;
+    box-shadow:
+  0 2.8px 2.2px rgba(14, 13, 13, 0.171),
+  0 6.7px 5.3px rgba(14, 13, 13, 0.185),
+  0 12.5px 10px rgba(29, 28, 28, 0.178),
+  0 22.3px 17.9px rgba(20, 20, 20, 0.274),
+  0 41.8px 33.4px rgba(17, 17, 17, 0.205),
+  0 100px 80px rgba(20, 20, 20, 0.205);
     margin-bottom: 20px;
 }
 
@@ -489,15 +606,27 @@ section .tittle::after {
 }
 
 .projectDetails:hover {
-    transform: scale(1.05);
-    background: crimson;
+    transform: scale(1.03);
+    background: white;
     border-radius: 6px;
+    cursor: pointer;
+    animation: vertical-shaking 0.8s;
 }
 
+.projectDetails:hover h3 {
+    color: black;
+}
+
+.projectDetails:hover p {
+    color: black;
+}
+.projectDetails:hover .projectDP {
+    border: 2px solid black;
+}
 .card .projectBtn {
     margin-top: 20px;
-    height: 45px;
-    width: 170px;
+    height: 50px;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -506,18 +635,22 @@ section .tittle::after {
 .card .projectBtn button {
     height: 100%;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
-    background: crimson;
+    background: green;
     color: white;
     border-radius: 6px;
-    border: 2px solid crimson;
+    border: 2px solid white;
     transition: all 0.3s ease;
 }
 
+.card .projectBtn button i {
+    font-size: 24px;
+}
 .card .projectBtn button:hover {
     color: white;
     background: none;
+    cursor: pointer;
     transform: scale(1.05);
 }
 
@@ -553,15 +686,16 @@ section .tittle::after {
 
 .contact .contact-content .row i {
     font-size: 25px;
-    color: crimson;
+    color: #4169E1;
 }
 
 .contact .contact-content .information .head {
-    color: crimson;
+    color: black;
     font-weight: 600;
 }
 
-.contact .contact-content .information .sub-tittle {
+.contact .contact-content .information .sub-tittle,
+.contact .contact-content .information .sub-tittle a {
     color: #333;
 }
 
@@ -613,8 +747,8 @@ section .tittle::after {
 .contact .right form .button button {
     height: 100%;
     width: 100%;
-    border: 2px solid crimson;
-    background: crimson;
+    border: 2px solid black;
+    background: #4169E1;
     color: white;
     border-radius: 6px;
     font-size: 20px;
@@ -624,20 +758,58 @@ section .tittle::after {
 }
 
 .contact .right form .button button:hover {
-    color: crimson;
+    color: black;
     background: none;
 }
 
+.logos {
+    width: 100%;
+    margin-top: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+
+}
+
+.logos i {
+    font-size: 24px;
+    color: blueviolet;
+    font-weight: 400;
+    margin-right: 30px;
+    transition: all ease 0.5s;
+    box-shadow:
+  0 2.8px 2.2px rgba(14, 13, 13, 0.171),
+  0 6.7px 5.3px rgba(14, 13, 13, 0.185),
+  0 12.5px 10px rgba(29, 28, 28, 0.178),
+  0 22.3px 17.9px rgba(20, 20, 20, 0.274),
+  0 41.8px 33.4px rgba(17, 17, 17, 0.205),
+  0 100px 80px rgba(20, 20, 20, 0.205);
+    margin-bottom: 20px;
+    border: 1px black;
+}
+
+.logos i:hover {
+    color: black;
+    cursor: pointer;
+    transform: scale(1.125);
+}
+
+
 footer {
     font-family: 'Ubuntu', sans-serif;
-    background: #111;
+    background: #4169E1;
     padding: 20px 23px;
     color: white;
     text-align: center;
+    margin-bottom: 1px;
 }
 
 footer span a {
-    color: crimson;
+    color: black;
     text-decoration: none;
 }
 
@@ -669,10 +841,10 @@ footer span a:hover {
         width: 100%;
         left: -100%;
         top: 0;
-        background: crimson;
+        background: #4169E1;
         text-align: center;
         padding-top: 80px;
-        transition: all 0.3s ease;
+        transition: all 0.6s ease;
     }
 
     .menu.active {
@@ -695,7 +867,8 @@ footer span a:hover {
 
     .home {
         display: flex;
-        background: url(images/small.png) no-repeat center;
+        background: url(images/bg1.png)
+        no-repeat center;
         height: 100vh;
         background-position: center;
         background-size: cover;
@@ -720,7 +893,7 @@ footer span a:hover {
     }
 
     .home .homeContent .text3 span {
-        color: crimson;
+        color: #4169E1;
         font-weight: 400;
     }
 
@@ -740,13 +913,13 @@ footer span a:hover {
         margin-bottom: 25px;
     }
 
-    .card {
-        background: #222;
-        width: calc(50% - 40px);
+    .projectGallery .projects-content .card {
+        background: #4169E1;
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
         color: white;
         border-radius: 6px;
         padding-top: 3px;
-        margin-bottom: 20px;
     }
 }
 
@@ -772,7 +945,6 @@ footer span a:hover {
     }
 
     .home .homeContent .text3 span {
-        color: crimson;
         font-weight: 300;
     }
 
@@ -796,7 +968,7 @@ footer span a:hover {
         margin-bottom: 25px;
     }
 
-    .card {
+    .projectGallery .projects-content .card {
         background: #222;
         width: 100%;
         color: white;
@@ -845,7 +1017,6 @@ footer span a:hover {
     }
 
     .home .homeContent .text3 span {
-        color: crimson;
         font-weight: 300;
     }
 
@@ -869,6 +1040,9 @@ footer span a:hover {
         margin-top: 40px;
     }
 
+    .about .about-content .column_right .columnText {
+        font-size: 18px;
+    }
     .about .about-content {
         display: flex;
         align-items: center;
@@ -889,8 +1063,8 @@ footer span a:hover {
         font-size: 12px;
     }
 
-    .card {
-        background: #222;
+    .projectGallery .projects-content .card {
+        background: #4169E1;
         width: calc(100%);
         color: white;
         border-radius: 6px;

@@ -1,11 +1,13 @@
 const navbar = document.getElementById("navbar");
 const sticky = navbar.offsetTop;
 
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll(".navbar .menu li a");
 const menuBtn  = document.querySelector(".menu-btn");
 const navMenu  = document.querySelector(".menu");
 const scrollUp  = document.querySelector(".scroll-up-btn");
 
-var box  = document.getElementById('navbar');
+var box  = document.querySelector(".navbar");
 var logo = document.getElementById('logo');
 
 
@@ -13,16 +15,16 @@ var logo = document.getElementById('logo');
 document.querySelectorAll(".menu").forEach(n => n.addEventListener("click", () => {
     navMenu.classList.remove("active");
 }))
-
-
+mysite.js
+mysite.js
 //scroll functions for sticky nav bar and the scroll to top button 
 function myFunction() {
   if (window.scrollY >= 20) {
-    box.style.background = "crimson";
+    box.classList.add("sticky");
     logo.style.color = "white";
   } else {
-    box.style.background = "rgba(3, 3, 3, 0.8)";
-    logo.style.color = "crimson";
+    box.classList.remove("sticky");
+    logo.style.color = "#4169E1";
   }
 
   if (window.scrollY >= 100) {
@@ -30,6 +32,10 @@ function myFunction() {
   } else {
     scrollUp.classList.remove("show");
   }
+
+  //calls the nav selector method
+  activeClassSelector();
+
 }
 
 // works for three bars on top right when using small display screen
@@ -58,3 +64,27 @@ var typed = new Typed(".typing_2", {
   backSpeed: 60,
   loop:true
 });
+
+//changes acive class
+
+function activeClassSelector() {
+  let currentSection = '';
+
+  sections.forEach( section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+
+    if(pageYOffset >= (sectionTop - sectionHeight / 3)) {
+      currentSection = section.getAttribute("id");
+    }
+
+    navLi.forEach( a => {
+      a.classList.remove("activeNav");
+
+      if(a.classList.contains(currentSection)) {
+        a.classList.add("activeNav");
+      }
+    })
+  })
+}

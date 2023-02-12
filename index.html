@@ -13,7 +13,7 @@
 
  
 </head>
-<body onscroll="myFunction()">
+<body onscroll="myFunction()" >
     <div class="scroll-up-btn" onclick="scrollUpDoc()">
         <i class="fas fa-angle-up"></i>
     </div>
@@ -21,12 +21,12 @@
         <div class="max-width">
             <div class="logo" > <a href="#">portfo<span id="logo">lio.</span></a></div>
             <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li> 
-                <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projectGallery">Project Gallery</a></li>
-                <li><a href="#contact">Contacts</a></li>
+                <li><a href="#home-section" class="home-section">Home</a></li>
+                <li><a href="#about-section" class="about-section">About</a></li> 
+                <li><a href="#services-section" class="services-section">Services</a></li>
+                <li><a href="#skills-section" class="skills-section" >Skills</a></li>
+                <li><a href="#projectGallery-section" class = "projectGallery-section">Project Gallery</a></li>
+                <li><a href="#contact-section" class="contact-section">Contacts</a></li>
             </ul>
             <div class="menu-btn" onclick="clickFunction()">
                 <input type="checkbox" id="check">
@@ -38,20 +38,35 @@
     </nav>
 
     <!--home section-->
-    <section class="home" id="home">
+    <section class="home" id="home-section">
 
         <div class="max-width">
-            <div class="homeContent">
+            <div class="homeContent fade_in">
                 <div class="text1">Hello my name is</div>
                 <div class="text2"><h1>Daniel Wambua</h1></div>
-                <div class="text3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire Me</a>
+                <div class="text3">And I'm a <span class="typing"></span>
+                
+                    <p>
+                        <ul>
+                            <br>
+                            <li>Software Engineer</li>
+                            <li>Android developer</li>
+                            <li>Web developer</li>
+                            <li>Freelancer</li>
+                            <br>
+                        </ul>
+                    </p>
+                
+                </div>
+                
+                <div class="dancing-btn">
+                <a href="mailto:wambuadaniel2001@gmail.com">Hire Me <i class="fa fa-arrow-right" aria-hidden="true"></i></a></div>
             </div>
         </div>
     </section>
     
    
-    <section class="about" id="about">
+    <section class="about" id="about-section">
         <div class="max-width">
             <h1 class="tittle">About Me</h1>
             <div class="about-content">
@@ -59,15 +74,17 @@
                 </div>
                 <div class="column_right">
                     <div class="columnText">I'm Daniel and am a <span class="typing_2"></span></div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente commodi, odit repudiandae est temporibus, nobis repellat amet libero dignissimos cupiditate deleniti iure, provident magnam obcaecati quas. Ratione et itaque quasi.
-                    Velit eveniet nobis voluptatem voluptates, quis ducimus minus impedit delectus quisquam maiores? Tempore magni harum iusto quo dolorem adipisci mollitia cupiditate eos autem, obcaecati provident consequuntur odio dolorum! Iure, perferendis!</p>
-                    <a href="#">Download CV</a>
+                    <p>
+                        I'm a multi-talented person with a range of skills in android development, web design, web development and graphic design. I have experience developing android apps using Java and Android Studio, and i'm familiar with the latest android design principles. I have a strong understanding of web design principles and can create visually appealing and responsive websites using HTML, CSS and JavaScript. I also have experience in web development, using technologies such as PHP and Python to create dynamic websites. I also have a good understanding of graphic design and can create eye-catching designs that align with the project's branding and aesthetic needs. I'm able to bring a diverse set of skills to any project.
+                    </p>
+                    
+                    <div class="dancing-btn-2"><a href="downloadable_content/DANIEL WAMBUA-CV.pdf" download >Download CV <i class="fa fa-download" aria-hidden="true"></i></a></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="services" id="services-section">
     
         <div class="max-width">
             <h1 class="tittle">My Services</h1>
@@ -77,23 +94,39 @@
                     <div class="div box">
                         <i class="fas fa-paint-brush"></i>
                         <div class="text"> Web Design</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis distinctio impedit, odio qui id molestias.</p>
+                        <p>
+                            I offer professional web design services that include layout design, graphic creation, image optimization and coding. Tailored to your business needs and goals, my service creates visually appealing, user-friendly and responsive websites that will help you reach your target audience and achieve objectives.
+                        </p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="div box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text"> Advertisment</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis distinctio impedit, odio qui id molestias.</p>
+                        <i class="fa fa-magic"></i>
+                        <div class="text"> Graphic Design</div>
+                        <p>
+                            I am a graphic designer, I offer services that include creating visual concepts, using computer software, to communicate ideas that inspire, inform, or captivate consumers. I can design logos, brochures, packaging, websites, and social media graphics, among other design needs. My goal is to create designs that effectively communicate the message and represent the brand.
+                        </p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="div box">
                         <i class="fa-solid fa-code"></i>
+                        <div class="text"> Software Engineering</div>
+                        <p>
+                            I am a software engineer, I'm an expert in creating custom software solutions, troubleshooting and debugging existing software, and improving the performance of existing systems. I work with clients to understand their needs, and develop software that meets their specific requirements and goals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="div box">
+                        <i class="fa fa-android" ></i>
                         <div class="text"> Mobile App Development</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis distinctio impedit, odio qui id molestias.</p>
+                        <p>
+                            I am an android developer and offer app development services, I can design, develop and deploy android mobile applications for various business needs. My services include creating custom apps from scratch, redesigning existing apps and adding new features. I work with you to understand your requirements and develop an app that meets your specific business needs and goals.
+                        </p>
                     </div>
                 </div>
 
@@ -101,27 +134,30 @@
         </div>
     </section>
 
-    <section class="skills" id="skills">
+    <section class="skills" id="skills-section">
         <div class="max-width">
             <h2 class="tittle">My skills</h2>
             <div class="skills-content">
-                <div class="left-column">
+                <div class="left-column fade_in">
                     <div class="text">My crestive skills and experiences.</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eligendi fugit temporibus saepe quaerat similique excepturi sed dolor autem. Libero ipsam fugit nisi esse deleniti enim saepe inventore corrupti, amet maiores nobis ad dolorem id perspiciatis illum quasi repellat quam asperiores quisquam? Ad quos totam quidem vero ratione ut necessitatibus, illo quaerat fuga blanditiis similique dolor incidunt esse culpa. Pariatur?</p>
-                    <a href="#">Read More</a>
+                    <p>
+                        I'm a creative learner with a range of skills and experiences in HTML5, CSS3, JavaScript, Python, Java, and Android development gained through their learning process. I have a solid understanding of web development principles and are proficient in creating responsive and visually appealing websites using HTML5, CSS3, and JavaScript. I have experience in using Python to build back-end systems. I also have proficiency in Java and familiar with Android development using Android Studio. I have experience in creating android apps with engaging UI/UX and implementing features like location services, push notifications, and more. Additionally, I have knowledge in working in a team of developers with skills in Git and GitHub, which enable me to collaborate and contribute to version control and code management of a project. I have a keen interest in design and are continuously learning to bring innovative solutions to any project.
+                    </p>
+                    <a href="skills_and_experiences.html">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </a>
                 </div>
 
-                <div class="right-column">
+                <div class="right-column fade_in">
                     <div class="pregression-bars">
                         <div class="info">
-                            <span>HTML 5</span>
+                            <span> <i class="fa fa-html5"></i>  HTML 5</span>
                             <span>90%</span>
                         </div>
                         <div class="line html"></div>
                     </div>
                     <div class="pregression-bars">
                         <div class="info">
-                            <span>CSS 3</span>
+                            <span><i class="fa fa-css3"></i> CSS 3</span>
                             <span>80%</span>
                         </div>
                         <div class="line css"></div>
@@ -149,7 +185,15 @@
                     </div>
                     <div class="pregression-bars">
                         <div class="info">
-                            <span>Java</span>
+                            <span>
+                                <i class='fab fa-java' style='font-size:28px'></i>  Java</span>
+                            <span>72%</span>
+                        </div>
+                        <div class="line java"></div>
+                    </div>
+                    <div class="pregression-bars">
+                        <div class="info">
+                            <span><i class='fab fa-python'></i> Python</span>
                             <span>72%</span>
                         </div>
                         <div class="line java"></div>
@@ -159,55 +203,123 @@
         </div>
     </section>
 
-    <section class="projectGallery" id="projectGallery">
+    <section class="projectGallery" id="projectGallery-section">
         <div class="max-width">
             <h2 class="tittle">Project Gallery</h2>
            
             <div class="projects-content">
+
                 <div class="card">
                     <div class="projectDetails">
                         <div class="projectDP"></div>
-                            <h3>Tic Tac Toe</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ab dolore tempore nam, velit dolores officia repellat libero commodi iure assumenda aut nobis voluptates omnis ad cupiditate labore quam laudantium!</p>
+                            <h3>Calculator App</h3>
+                            <p>Introducing an android calculator app that is versatile and easy to use. Developed with the powerful and versatile Java programming language,it offers advanced features and a user-friendly interface for all your mathematical needs. Perfect for students, professionals and anyone looking for a reliable calculator on the go. Download now and experience the convenience, versatility and accuracy of this app.</p>
                     </div>
                     <div class="projectBtn">
-                        <button type="submit">DOWNLOAD APK</button>
+                        <a href="downloadable_content/Calculator.apk" download>
+                            <button type="submit">DOWNLOAD APK <br> <i class="fa fa-download" aria-hidden="true"></i></button>
+                        </a>
                     </div>
-                </div>
+                </div> <!-- calculator app card -->
+
+
+                <div class="card">
+                    <div class="projectDetails">
+                        <div class="projectDP"></div>
+                            <h3>ProScanner 2023</h3>
+                            <p>
+                                A versatile barcode and QR code scanner and generator app. Developed with Java, it allows you to scan and generate codes quickly and easily, making it perfect for businesses, students, and anyone in need of a reliable scanner and generator on the go. Download now and experience the convenience of this app in your daily routine.
+                            </p>
+                    </div>
+                    <div class="projectBtn">
+                        <a href="downloadable_content/proScanner2023.apk" download>
+                            <button type="submit">DOWNLOAD APK <br> <i class="fa fa-download" aria-hidden="true"></i></button>
+                        </a>
+                    </div>
+                </div> <!-- scanner app card -->
+
+                <div class="card">
+                    <div class="projectDetails">
+                        <div class="projectDP"></div>
+                            <h3>Trill</h3>
+                            <p>
+                                Trill is a sleek and user-friendly android music player app developed in Java programming language. It boasts a variety of features including the ability to play local music files, create and manage playlists. The app has a modern and intuitive interface, making it easy for users to navigate and find the music they love. Trill is the perfect music app for those who want to organize and listen to their music player in a seamless and enjoyable way.
+                            </p>
+                    </div>
+                    <div class="projectBtn">
+                        <a href="downloadable_content/Trill.apk" download>
+                            <button type="submit">DOWNLOAD APK <br> <i class="fa fa-download" aria-hidden="true"></i></button>
+                        </a>
+                    </div>
+                </div> <!-- Trill app card -->
 
 
                 <div class="card">
                     <div class="projectDetails">
                         <div class="projectDP"></div>
                             <h3>Tic Tac Toe</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ab dolore tempore nam, velit dolores officia repellat libero commodi iure assumenda aut nobis voluptates omnis ad cupiditate labore quam laudantium!</p>
+                            <p>
+                                This is an android Tic-tac-toe app that I recently developed using Java programming language. It allows two players to play against each other in a classic game with added sound effects. The app features a simple and clean user interface, allowing players to easily navigate and play the game. It is perfect for those who want to enjoy a classic game with friends or family and experience an immersive gaming experience.
+                            </p>
                     </div>
                     <div class="projectBtn">
-                        <button type="submit">DOWNLOAD APK</button>
+                        <a href="downloadable_content/TicTacToe.apk" download>
+                            <button type="submit">DOWNLOAD APK <br> <i class="fa fa-download" aria-hidden="true"></i></button>
+                        </a>
                     </div>
-                </div>
+                </div> <!-- Trill app card -->
 
                 <div class="card">
                     <div class="projectDetails">
                         <div class="projectDP"></div>
-                            <h3>Tic Tac Toe</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ab dolore tempore nam, velit dolores officia repellat libero commodi iure assumenda aut nobis voluptates omnis ad cupiditate labore quam laudantium!</p>
+                            <h3>Car sales website</h3>
+                            <p>
+                                Discover the best car buying experience with our state-of-the-art car sales website. Browse through a wide range of vehicles from the comfort of your home and find the perfect car for you. Our user-friendly interface and high-quality images make it easy to find the right car based on your specifications. With detailed product descriptions, you can make an informed purchase decision. Whether you're in the market for a new or used car, our website has you covered.
+                            </p>
                     </div>
                     <div class="projectBtn">
-                        <button type="submit">DOWNLOAD APK</button>
+                        <a href="https://danielwambua254.github.io/Scania/" target="_blank" rel="noopener noreferrer">
+                            <button type="submit">Visit site <br> <i class="fa fa-link" aria-hidden="true"></i></button>
+                        </a>
                     </div>
-                </div>
+                </div> <!-- Trill app card -->
+
+                <div class="card">
+                    <div class="projectDetails">
+                        <div class="projectDP"></div>
+                            <h3>Marketing Website</h3>
+                            <p>
+                                Our digital marketing website is designed to provide innovative and effective marketing solutions for businesses. Built with HTML, CSS, and JavaScript, our website is user-friendly and visually appealing
+                            </p>
+                    </div>
+                    <div class="projectBtn">
+                        <a href=" https://danielwambua254.github.io/DW-marketing/" target="_blank" rel="noopener noreferrer">
+                            <button type="submit">Visit site <br> <i class="fa fa-link" aria-hidden="true"></i></button>
+                        </a>
+                    </div>
+                </div> <!-- Trill app card -->
+
             </div>
+            
         </div>
+        <div class="moreprojects"  style="width: 100%; text-align: center; color: white;">
+            <a href="https://github.com/DanielWambua254" target="_blank" rel="noopener noreferrer">
+                <p style="color: white; text-decoration: underline;">More Projects</p>
+            </a>
+        </div>
+
+        <p style="text-align: center; color: white; margin-top: 20px; font-size: 18px;">Warning: Some apps may not function on newer android versions !</p>
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact" id="contact-section">
         <div class="max-width">
             <h2 class="tittle">Contact Me</h2>
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get In Touch</div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempore adipisci similique temporibus placeat accusamus rem eum ullam incidunt commodi.</p>
+                    <p>
+                        Welcome to my contact section! I'm excited to hear from you. Whether you're a potential employer, a client, or just someone interested in my work, I'd love to connect. You can reach me via email, by phone or by filling out the form below. I'm also active on social media, so feel free to connect with me on diffrent social media platforms. Thank you for visiting my portfolio, and I look forward to hearing from you soon!"
+                    </p>
                     <div class="icons">
                         <div class="row">
                             <i class="fas fa-user"></i>
@@ -220,7 +332,7 @@
                         <div class="row">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="information">
-                                <div class="head">Address</div>
+                                <div class="head">location</div>
                                 <div class="sub-tittle">Murang'a, Kenya</div>
                             </div>
                         </div>
@@ -229,7 +341,7 @@
                             <i class="fas fa-envelope"></i>
                             <div class="information">
                                 <div class="head">Email</div>
-                                <div class="sub-tittle">wambuadaniel2001@gmail.com</div>
+                                <div class="sub-tittle"><p><a href="mailto:wambuadaniel2001@gmail.com">wambuadaniel2001@gmail.com</a></p></div>
                             </div>
                         </div>
 
@@ -237,7 +349,7 @@
                             <i class="fas fa-phone"></i>
                             <div class="information">
                                 <div class="head">Phone</div>
-                                <div class="sub-tittle">0727505049</div>
+                                <div class="sub-tittle"><p><a href="tel:+254727505049">0727505049</a><b>  or  </b> <a href="tel:+254737275707">0737275707</a> </p></div>
                             </div>
                         </div>
                     </div>
@@ -261,16 +373,39 @@
                             <textarea cols="30" rows="10" placeholder="Describe project..." required name="message"></textarea>
                         </div>
                         <div class="button">
-                            <button type="submit">Send message</button>
+                            <button type="submit">Send message <i class="fa fa-paper-plane-o"></i></button>
                         </div>
                     </form>
+                    <div class="logos">
+                        <a href="https://github.com/DanielWambua254" target="_blank" rel="noopener noreferrer">
+                            <div class="ig">
+                                <div><i class="fa fa-github" aria-hidden="true"></i></div>
+                            </div>
+                        </a>
+                        <div class="twitter">
+                            <div><i class="fa fa-twitter"></i></div>
+                        </div>
+                        <a href="https://www.facebook.com./profile.php?id=100045752416261" target="_blank" rel="noopener noreferrer">
+                            <div class="facebook">
+                                <div><i class="fa fa-facebook"></i></div>
+                            </div>
+                        </a>
+                        <a href="http://www.linkedin.com/in/daniel-munyao-0727505049-SAF" target="_blank" rel="noopener noreferrer">
+                            <div class="linkedIn">
+                                <div><i class="fa fa-linkedin"></i></div>
+                            </div>
+                        </a>
+                        <div class="telegram">
+                            <div><i class="fa fa-telegram"></i></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <span>Created By <a href="#">Daniel Wambua</a> | <span>&copy; 2022 All rights reserved.</span></span>
+        <span>Created By <a href="mailto:wambuadaniel2001@gmail.com">Daniel Wambua</a> | <span>&copy; 2022 All rights reserved.</span></span>
     </footer>
 
    <script src="mysite.js"></script>
