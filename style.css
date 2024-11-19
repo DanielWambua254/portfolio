@@ -121,7 +121,7 @@ html {
 
 .home {
     display: flex;
-    background-image: url(images/Artboard\ 1.png);
+    background-image: url(images/Artboard1.png);
     background-repeat: no-repeat;
     height: 110vh;
     background-position: center;
@@ -294,7 +294,7 @@ section .tittle::after {
 }
 
 .about .about-content .left_img {
-    height: 350px;
+    height: 420px;
     width: 350px;
     border-radius: 6px;
     background: url(images/profile_1.jpg) center no-repeat;
